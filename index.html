@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Grammer.js - JavaScript Grammar tools</title>
+</head>
+<body>
+  <output></output>
+
+  <script>var GrammarConfig = {
+    nativesPrefix: null
+  }</script>
+  <script src="grammar.js"></script>
+  <script>
+    var output = document.getElementsByTagName('output')[0];
+    
+    function toOutput(label, str) {
+      output.innerHTML += label + ': ' + str + '<br>';
+    }
+    
+    var sentence = 'Hello world from Grammar';
+    var words = Grammar.words(sentence);
+    
+    toOutput('words', words);
+    toOutput('fromCamelCase', Grammar.fromCamelCase('helloWorldFromGrammar'));
+    toOutput('fromStudlyCaps', Grammar.fromStudlyCaps('HelloWorldFromGrammar'));
+    toOutput('fromSnakeCase', Grammar.fromSnakeCase('hello_world_from_grammar'));
+    toOutput('fromSlug', Grammar.fromSlug('hello-world-from-grammar'));
+    toOutput('toCamelCase', Grammar.toCamelCase(words));
+    toOutput('toStudlyCaps', Grammar.toStudlyCaps(words));
+    toOutput('toSnakeCase', Grammar.toSnakeCase(words));
+    toOutput('toSlug', Grammar.toSlug(words));
+    toOutput('pluralize 0', Grammar.pluralize('{0} comments', '{0} comment', '{0} comments', 0));
+    toOutput('pluralize 1', Grammar.pluralize('{0} comments', '{0} comment', '{0} comments', 1));
+    toOutput('pluralize 247', Grammar.pluralize('{0} comments', '{0} comment', '{0} comments', 247));
+  </script>
+</body>
+</html>

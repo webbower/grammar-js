@@ -1,0 +1,19 @@
+{
+  "name": "grammar-js",
+  "version": "0.1.0",
+  "authors": [
+    "Matt Bower <matt@webbower.com>"
+  ],
+  "description": "A library of grammatical tools",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

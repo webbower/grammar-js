@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Grammer.js - JavaScript Grammar tools</title>
+  <title>GrammerJS - JavaScript Grammar tools</title>
 </head>
 <body>
   <output></output>
@@ -30,9 +30,9 @@
     toOutput('toStudlyCaps', Grammar.toStudlyCaps(words));
     toOutput('toSnakeCase', Grammar.toSnakeCase(words));
     toOutput('toSlug', Grammar.toSlug(words));
-    toOutput('pluralize 0', Grammar.pluralize('{0} comments', '{0} comment', '{0} comments', 0));
-    toOutput('pluralize 1', Grammar.pluralize('{0} comments', '{0} comment', '{0} comments', 1));
-    toOutput('pluralize 247', Grammar.pluralize('{0} comments', '{0} comment', '{0} comments', 247));
+    toOutput('pluralize 0',   Grammar.pluralize('No comments', '{0} comment', '{0} comments', 0));
+    toOutput('pluralize 1',   Grammar.pluralize('No comments', '{0} comment', '{0} comments', 1));
+    toOutput('pluralize 247', Grammar.pluralize('No comments', '{0} comment', '{0} comments', 247));
   </script>
 </body>
 </html>

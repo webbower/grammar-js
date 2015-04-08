@@ -1,4 +1,4 @@
-# Grammar.js
+# GrammarJS
 
 A utility library for simplifying grammatical problems.
 
@@ -72,9 +72,9 @@ Outputs a specific string based on the `count` argument:
 
 Any instances of the sub-string `"{0}"` found in `zero`, `one`, or `many` are replaced with `count`.
 
-    Grammar.pluralize('No comments', 'One comment', '{0} comments', 0); // No comments
-    Grammar.pluralize('No comments', 'One comment', '{0} comments', 1); // One comments
-    Grammar.pluralize('No comments', 'One comment', '{0} comments', 247); // 247 comments
+    Grammar.pluralize('No comments', '{0} comment', '{0} comments', 0); // No comments
+    Grammar.pluralize('No comments', '{0} comment', '{0} comments', 1); // One comments
+    Grammar.pluralize('No comments', '{0} comment', '{0} comments', 247); // 247 comments
 
 ## Configuration
 
@@ -108,3 +108,11 @@ Yes, I know modifying the natives is generally perceived as bad, but I disagree 
 ### `nativesPrefix: <string>` (default `'gr'`)
 
 If you enable binding the GrammarJS functions to their appropriate natives, this will set the prefix for the functions. For example (assuming `nativesPrefix` is unmodified), you would call the methods like `grWords()` and `grToStudlyCaps()`. You can set `nativesPrefix` to `null` to have the functions bound as they are named, without a prefix.
+
+## TODO
+
+* Add LICENSE file
+* Add argument validation to functions
+* Add unit tests
+* Finish `sentences` function
+* Post to Bower and NPM repos
